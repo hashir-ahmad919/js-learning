@@ -47,9 +47,52 @@ let boolenIsLoggedIn2 = Boolean(isLoggedIn2);
 
 let someNumber = 33;
 let stringnNumber = String(someNumber);
-console.log(typeof stringnNumber);
-console.log(stringnNumber);
+// console.log(typeof stringnNumber);
+// console.log(stringnNumber);
 
 
 
+//****** Operations *******
+ let value = 3;
+ let negative = -value
+//  console.log(negative);
 
+// console.log(2+2);
+// console.log(2*2);
+// console.log(2**3);
+// console.log(2-2);
+
+let str1 = "Hello";
+let str2 = " Hashir"
+
+// console.log(str1 + str2)
+
+// console.log(1 + "2");
+// console.log("1" + 2);
+// console.log(3 + 2 + 4 + "3");
+// console.log("3" + 3 + 3)
+// console.log(undefined + " 3"); 
+// console.log(+ true);
+
+let gameCounter = 100;
+// ++gameCounter;
+// console.log(gameCounter++)
+
+
+let a = 3;
+
+let b = a++;
+//  console.log(b)
+
+// console.log(4 > 7);
+// console.log("02" > 1)
+// console.log("2" > 1);
+
+// console.log(null > 0)
+// console.log(null == 0)
+// console.log(null >= 0)
+
+
+console.log(undefined > 0)
+console.log(undefined == 0)
+console.log(undefined >= 0)

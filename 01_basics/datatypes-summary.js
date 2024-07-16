@@ -27,9 +27,38 @@ const myFunction = function(){
     console.log("Hello Hashir")
 }
 
-console.log(typeof anotherId);
+// console.log(typeof anotherId);
 
 
 // functions => function
 // array => object
 // object => object
+
+
+
+
+// ++++++++++++++++++++
+
+
+// stack(Primitivd DT) copy    ,   Heap(Non-Primitive) reference
+
+
+let myYoutubeName = "HashirAhmadDotCom"
+let anotherName = myYoutubeName;
+anotherName = "ChaiAurEcom"
+
+console.log(myYoutubeName)
+console.log(anotherName)
+
+
+
+let userOne = {
+    email: "hak47dev@gmail.com",
+    name : "Hashir"
+}
+
+let userTwo = userOne;
+userTwo.email = "hadev@gmail.com";
+
+console.log(userOne.email);
+console.log(userTwo.email)

@@ -43,26 +43,57 @@ const obj4 = {...obj1, ...obj2, ...obj3}     //{obj1, obj2}
 const user = [
     {
         id: 1,
-        emaail: "hashir@gmail.com"
+        email: "hashir@gmail.com"
     },
     {
         id: 2,
-        emaail: "hash@gmail.com"
+        email: "hash@gmail.com"
     },
     {
         id: 3,
-        emaail: "ha@gmail.com"
+        email: "ha@gmail.com"
     },
 ]
 
 user[1].email
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
 
 // to avoid crashing we check whether the property exists or not it returns boolean
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+const course = {
+    courseName: "Js in Hindi",
+    price: "999",
+    courseInstructor: "Hashir"
+}
+
+
+//tradtional way
+// course.courseInstructor 
+
+//modern way , good quality code    
+//Whenever we use {} remember we're doing destructuring
+const {courseInstructor: instrcutor} = course
+// console.log(courseInstructor);
+console.log(instrcutor);
+
+
+
+//  JSON formats
+// {
+//     "name" : "Hashir",
+//     "age" : "24",
+//     "location" : "Lahore"
+// }
+
+[
+    {},
+    {},
+    {}
+]

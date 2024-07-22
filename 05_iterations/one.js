@@ -59,6 +59,7 @@ for (let i = 1; i <= 7; i++) {
 
 
 
+// practice of break in nested for loop:
 
 // for (let index = 0; index < 5; index++) {
 //    console.log(`outer loop ${index}`);

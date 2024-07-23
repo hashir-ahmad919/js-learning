@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #f1f1f1;">
+    <ul class="language">
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Cpp</li>
+    </ul>
+</body>
+
+<script>
+
+    //not an optimized way as through innerHTML we traverse the whole html 
+    addLanguage= (langName) => {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").appendChild(li)    
+    }
+    addLanguage("ruby");
+    addLanguage("C#")
+
+
+    // optimized through append
+    addOptiLanguage = (lang) => {
+        const li = document.createElement("li");
+        li.append(document.createTextNode(lang))
+        document.querySelector(".language").appendChild(li)
+    }
+
+    addOptiLanguage("typescript")
+
+
+    // edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "JOJO"
+
+    //optimized way
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi)
+
+
+    //edit
+    // const thirdLang = document.createElement("li");
+    // thirdLang.textContent = "object C"
+    // secondLang.replaceWith(thirdLang)
+
+
+    //edit
+    const firstLang = document.querySelector("li: first-child")
+    firstLang.outerHTML = "<li>Objective C </li>"
+
+
+    //remove
+
+    const lastLang = document.querySelector('li:last-child')
+    langName.remove()
+
+</script>
+</html>

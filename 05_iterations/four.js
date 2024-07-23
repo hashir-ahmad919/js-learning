@@ -27,6 +27,8 @@ map.set("PKR", "Pakistan");
 map.set("US", "United States");
 map.set("GER", "Germany");
 
+
+// for in doesnt work on map as map isnt iteeratable
 for (const key in map) {
     console.log(key);   
 }

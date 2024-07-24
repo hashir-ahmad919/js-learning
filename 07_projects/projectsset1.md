@@ -48,7 +48,7 @@ buttons.forEach((btn) => {
 ```
 
 
-## project 2
+## project 2 solution
 
 ``` javascript
 
@@ -88,6 +88,25 @@ form.addEventListener('submit', (e) => {
 
   console.log(height, weight);
 });
+
+
+```
+
+
+
+
+## project 3 solution
+
+``` javascript
+
+const clock = document.getElementById("clock");
+
+setInterval(function(){
+  let date = new Date()
+  // console.log(date.toLocaleTimeString())
+
+  clock.innerText = date.toLocaleTimeString()
+}, 1000)
 
 
 ```

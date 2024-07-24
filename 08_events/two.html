@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #f1f1f1;">
+    <h1> HASHIR AHMAD KHAN</h1>  
+    <button id="stop">Stop</button>  
+</body>
+<script>
+    // it waits for the time you mention adn executes aftet the time is out
+    const sayHashir = () =>{
+        console.log("Hashir");
+    }
+
+    const changeHeading = () => document.querySelector('h1').innerHTML = "Best project manager"
+
+    setTimeout( changeHeading, 4000 )
+
+    const changeMe = setTimeout(changeHeading, 2000)
+
+    document.getElementById("stop").addEventListener('click', () => {
+        clearTimeout(changeMe)
+        console.log("Stopped");
+    }, false)
+</script>
+</html>

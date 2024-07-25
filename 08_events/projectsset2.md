@@ -1,9 +1,10 @@
 ## Project chnage bg color
-
+## Project Link
+[Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
 ``` javascript
 
-// generate a random color
+// generate a random bg color
 
 const randomColor = () => {
   const hex = '0123456789ABCDEF';
@@ -16,21 +17,53 @@ const randomColor = () => {
 };
 
 // console.log(randomColor())
+let intervalId;
 const startChangingColor = () => {
-  let intervalIdsetInterval(changeBgColor, 1000);
-
-  function changeBgColor(){
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+  function changeBgColor() {
     document.body.style.backgroundColor = randomColor();
-  };
+  }
 };
-const stopChangingColor = () => {};
+const stopChangingColor = (e) => {
+  clearInterval(intervalId);
+  intervalId = null;
+};
 
-document
-  .querySelector('#start')
-  .addEventListener('click', startChangingColor, false);
-document
-  .querySelector('#stop')
-  .addEventListener('click', stopChangingColor, false);
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+```
+
+
+
+
+''' javascript 
+
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class="color">
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>Key Code</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+
+  </div>
+  `;
+});
 
 
 ```
